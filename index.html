@@ -3,146 +3,246 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HTML Formatting Techniques Reference</title>
+    <title>Join Our Force | [Department Name] Recruitment</title>
     <link rel="stylesheet" href="style.css">
     <style>
-        /* Basic styling for professionalism - assuming style.css handles more */
+        /* Police/Authority Theme Styling */
+        :root {
+            --primary-blue: #003366; /* Deep Navy Blue */
+            --secondary-gold: #FFC300; /* Accent Gold/Yellow */
+            --text-dark: #333;
+            --text-light: #f4f4f9;
+            --border-color: #ddd;
+        }
+
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: 'Arial', 'Helvetica', sans-serif;
             line-height: 1.6;
-            padding: 20px;
-            max-width: 900px;
-            margin: 0 auto;
-        }
-        header {
-            background: #333;
-            color: white;
-            padding: 20px;
-            text-align: center;
-            margin-bottom: 30px;
-        }
-        h1 {
+            color: var(--text-dark);
             margin: 0;
-            font-size: 2.5em;
+            padding: 0;
+            background-color: #f9f9f9;
         }
+
+        /* Header and Hero Section */
+        header {
+            background: var(--primary-blue);
+            color: var(--text-light);
+            padding: 80px 20px;
+            text-align: center;
+            background-image: linear-gradient(rgba(0, 51, 102, 0.8), rgba(0, 51, 102, 0.9)), url('police_bg_placeholder.jpg'); /* Placeholder for a strong image */
+            background-size: cover;
+            background-position: center;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        header h1 {
+            margin-top: 0;
+            font-size: 3.5em;
+            letter-spacing: 2px;
+            color: white;
+            text-transform: uppercase;
+        }
+
+        header p {
+            font-size: 1.5em;
+            margin-bottom: 30px;
+            color: var(--secondary-gold);
+        }
+
+        /* Main Layout */
+        main {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        /* Section Styling */
+        section {
+            background: white;
+            padding: 40px;
+            margin-bottom: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+            border-left: 5px solid var(--primary-blue);
+        }
+
         h2 {
-            color: #007bff;
-            border-bottom: 2px solid #eee;
-            padding-bottom: 5px;
-            margin-top: 30px;
+            color: var(--primary-blue);
+            font-size: 2em;
+            border-bottom: 3px solid var(--secondary-gold);
+            padding-bottom: 10px;
+            margin-bottom: 30px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
         }
-        code {
-            background-color: #f4f4f9;
-            padding: 2px 4px;
-            border-radius: 3px;
-            font-family: monospace;
+
+        /* Lists and Details */
+        .requirements-grid {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            justify-content: space-between;
         }
-        pre {
-            background-color: #272822;
-            color: #f8f8f2;
-            padding: 15px;
-            border-radius: 5px;
-            overflow-x: auto;
+
+        .requirement-card {
+            flex: 1 1 30%;
+            background: #eef;
+            padding: 20px;
+            border-radius: 6px;
+            border: 1px solid #cce;
+            transition: transform 0.2s;
         }
-        .example-container {
-            margin-bottom: 25px;
-            padding: 15px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
+
+        /* Styling for the clickable link wrapper */
+        .requirement-card a {
+            display: block;
+            text-decoration: none;
+            color: inherit;
+            padding: 10px;
+            border-radius: 6px;
+            transition: background-color 0.2s;
+        }
+
+        .requirement-card a:hover {
+            background-color: #d5e9ff; /* Light hover effect */
+            transform: translateY(-3px);
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .requirement-card h3 {
+            color: var(--primary-blue);
+            margin-top: 0;
+        }
+
+        /* Call to Action Button */
+        .cta-button {
+            display: inline-block;
+            background-color: var(--secondary-gold);
+            color: var(--primary-blue);
+            padding: 15px 40px;
+            font-size: 1.2em;
+            text-decoration: none;
+            border-radius: 50px;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.2s;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            margin-top: 20px;
+        }
+
+        .cta-button:hover {
+            background-color: #e6b000; /* Slightly darker gold */
+            transform: translateY(-2px);
+        }
+
+        /* Footer */
+        footer {
+            background: var(--primary-blue);
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+            font-size: 0.9em;
         }
     </style>
 </head>
 <body>
     <header>
-        <h1>Comprehensive HTML Formatting Guide</h1>
-        <p>Mastering the structure and presentation of web content.</p>
+        <h1>[Department Name] Police Department</h1>
+        <p>Protecting and Serving Our Community Since 1985</p>
     </header>
+
     <main>
-        <section class="example-container">
-            <h2>1. Text Emphasis and Semantic Tags</h2>
-            <p>HTML provides various tags to convey meaning, not just appearance. Use these tags for semantic structure:</p>
-            <ul>
-                <li><strong>&lt;strong&gt;</strong>: Used for strong importance (usually bold).</li>
-                <li><em>&lt;em&gt;</em>: Used for emphasis (usually italic).</li>
-                <li><mark><code>&lt;mark&gt;</code></mark>: Highlights text (like a marker pen).</li>
-                <li><abbr title="HyperText Markup Language"><code>&lt;abbr&gt;</code></abbr>: Defines an abbreviation or acronym.</li>
-            </ul>
-            <p>Example: This text has <strong>strong importance</strong>, while this part is <em>emphasized</em>.</p>
+        <section id="mission">
+            <h2>A Commitment to Community Safety</h2>
+            <p>Join a force dedicated to integrity, service, and excellence. We are more than just a job; we are a commitment to protecting the lives and property of our neighbors. Our officers are trained in advanced conflict resolution and community engagement.</p>
         </section>
-
-        <section class="example-container">
-            <h2>2. Code and Preformatted Text</h2>
-            <p>Displaying code snippets or text that must maintain specific spacing:</p>
-            
-            <h3>Inline Code (<code>&lt;code&gt;</code>)</h3>
-            <p>Use <code>&lt;code&gt;</code> for short inline elements, such as variable names or tags. Example: The function is <code>calculateTotal()</code>.</p>
-
-            <h3>Preformatted Blocks (&lt;pre&gt; and &lt;code&gt;)</h3>
-            <p>Use <code>&lt;pre&gt;</code> to preserve whitespace and line breaks, ideal for displaying code blocks:</p>
-            <pre><code>
-function greet(name) {
-    console.log("Hello, " + name + "!");
-}
-greet("World");
-            </code></pre>
+        <section>
+            <h2 style="margin-top: 40px;">What We Offer</h2>
+            <div style="display: flex; gap: 20px;">
+                <div style="flex: 1;">
+                    <h3 style="margin-top: 0;">Experience</h3>
+                    <p>Comprehensive training covering law enforcement, crisis management, and community relations.</p>
+                </div>
+                <div style="flex: 1;">
+                    <h3 style="margin-top: 0;">Support</h3>
+                    <p>A supportive culture dedicated to the well-being and professional growth of every officer.</p>
+                </div>
+            </div>
         </section>
-
-        <section class="example-container">
-            <h2>3. Lists (Ordered and Unordered)</h2>
-            <p>Structure content using appropriate list types:</p>
-            
-            <h3>Unordered List (&lt;ul&gt;)</h3>
-            <ul>
-                <li>Item one (using <code>&lt;li&gt;</code>)</li>
-                <li>Item two</li>
-                <li>Item three</li>
-            </ul>
-
-            <h3>Ordered List (&lt;ol&gt;)</h3>
-            <ol>
-                <li>First step</li>
-                <li>Second step</li>
-                <li>Final step</li>
-            </ol>
+        <section>
+            <h2 style="margin-top: 40px;">Key Areas of Focus</h2>
+            <div style="display: flex; gap: 20px;">
+                <div style="flex: 1;">
+                    <h3 style="margin-top: 0;">Community Policing</h3>
+                    <p>Building trust and strong relationships with the neighborhoods we serve.</p>
+                </div>
+                <div style="flex: 1;">
+                    <h3 style="margin-top: 0;">Emergency Response</h3>
+                    <p>Rapid, professional, and effective response to all emergencies.</p>
+                </div>
+            </div>
+        </section>
+        <section>
+            <h2 style="margin-top: 40px;">Our Pillars</h2>
+            <div style="display: flex; gap: 20px;">
+                <div style="flex: 1;">
+                    <h3 style="margin-top: 0;">Integrity</h3>
+                    <p>Upholding the highest ethical standards in every action we take.</p>
+                </div>
+                <div style="flex: 1;">
+                    <h3 style="margin-top: 0;">Excellence</h3>
+                    <p>Commitment to continuous improvement and professional mastery.</p>
+                </div>
+            </div>
+        </section>
+        <section>
+            <h2 style="margin-top: 40px;">Career Opportunities</h2>
+            <div style="display: flex; gap: 20px;">
+                <div style="flex: 1;">
+                    <h3 style="margin-top: 0;">Join Us</h3>
+                    <p>Learn how you can begin a rewarding career protecting our community.</p>
+                </div>
+                <div style="flex: 1;">
+                    <h3 style="margin-top: 0;">Apply Today</h3>
+                    <p>Visit our official website for application details and open positions.</p>
+                </div>
+            </div>
+        </section>
+        <section>
+            <h2 style="margin-top: 40px;">Our Values</h2>
+            <div style="display: flex; gap: 20px;">
+                <div style="flex: 1;">
+                    <h3 style="margin-top: 0;">Respect</h3>
+                    <p>Treating every individual with dignity and consideration.</p>
+                </div>
+                <div style="flex: 1;">
+                    <h3 style="margin-top: 0;">Service</h3>
+                    <p>Putting the needs of the community before all else.</p>
+                </div>
+            </div>
         </section>
         
-        <section class="example-container">
-            <h2>4. Blockquotes and Citations</h2>
-            <p>Use these tags for quoting external sources or citing information:</p>
-            <blockquote cite="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/blockquote">
-                "Semantic HTML structure is crucial for accessibility and SEO."
-            </blockquote>
-            <p><em>Note:</em> The <code>&lt;cite&gt;</code> tag can wrap a URL or source title, often used within a blockquote.</p>
-        </section>
-
-        <section class="example-container">
-            <h2>5. Tables (Structured Data)</h2>
-            <p>Use tables for displaying data that requires rows and columns:</p>
-            <table>
-                <thead>
-                    <tr>
-                        <th>Feature</th>
-                        <th>Status</th>
-                        <th>Notes</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Semantic Tags</td>
-                        <td>✅</td>
-                        <td>Improved structure</td>
-                    </tr>
-                    <tr>
-                        <td>Responsiveness</td>
-                        <td>✅</td>
-                        <td>Viewport meta tag included</td>
-                    </tr>
-                </tbody>
-            </table>
-        </section>
-
-        <button id="demoButton">Execute Example Function</button>
-    </main>
-    <script src="script.js"></script>
+        <div style="margin-top: 60px; text-align: center;">
+            <h2 style="margin-bottom: 30px;">Ready to Serve?</h2>
+            <p style="font-size: 1.2em;">Explore our career paths and join a team dedicated to making a tangible difference.</p>
+        </div>
+        
+        <!-- Original content structure retained for context, but content updated to reflect general corporate/service structure -->
+        <div style="margin-top: 60px;">
+            <h2 style="margin-bottom: 30px;">Join Our Team</h2>
+            <div style="display: flex; gap: 20px;">
+                <div style="flex: 1;">
+                    <h3 style="margin-top: 0;">Learn More</h3>
+                    <p>Visit our careers page for detailed job descriptions.</p>
+                </div>
+                <div style="flex: 1;">
+                    <h3 style="margin-top: 0;">Apply Now</h3>
+                    <p>Submit your application through our online portal.</p>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
