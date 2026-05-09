@@ -3,16 +3,145 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Hello World App</title>
+    <title>HTML Formatting Techniques Reference</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        /* Basic styling for professionalism - assuming style.css handles more */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            padding: 20px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        header {
+            background: #333;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+        h2 {
+            color: #007bff;
+            border-bottom: 2px solid #eee;
+            padding-bottom: 5px;
+            margin-top: 30px;
+        }
+        code {
+            background-color: #f4f4f9;
+            padding: 2px 4px;
+            border-radius: 3px;
+            font-family: monospace;
+        }
+        pre {
+            background-color: #272822;
+            color: #f8f8f2;
+            padding: 15px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+        .example-container {
+            margin-bottom: 25px;
+            padding: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+    </style>
 </head>
 <body>
     <header>
-        <h1>Hello World!</h1>
+        <h1>Comprehensive HTML Formatting Guide</h1>
+        <p>Mastering the structure and presentation of web content.</p>
     </header>
     <main>
-        <p id="greeting">Welcome to my simple application.</p>
-        <button id="helloButton">Click Me</button>
+        <section class="example-container">
+            <h2>1. Text Emphasis and Semantic Tags</h2>
+            <p>HTML provides various tags to convey meaning, not just appearance. Use these tags for semantic structure:</p>
+            <ul>
+                <li><strong>&lt;strong&gt;</strong>: Used for strong importance (usually bold).</li>
+                <li><em>&lt;em&gt;</em>: Used for emphasis (usually italic).</li>
+                <li><mark><code>&lt;mark&gt;</code></mark>: Highlights text (like a marker pen).</li>
+                <li><abbr title="HyperText Markup Language"><code>&lt;abbr&gt;</code></abbr>: Defines an abbreviation or acronym.</li>
+            </ul>
+            <p>Example: This text has <strong>strong importance</strong>, while this part is <em>emphasized</em>.</p>
+        </section>
+
+        <section class="example-container">
+            <h2>2. Code and Preformatted Text</h2>
+            <p>Displaying code snippets or text that must maintain specific spacing:</p>
+            
+            <h3>Inline Code (<code>&lt;code&gt;</code>)</h3>
+            <p>Use <code>&lt;code&gt;</code> for short inline elements, such as variable names or tags. Example: The function is <code>calculateTotal()</code>.</p>
+
+            <h3>Preformatted Blocks (&lt;pre&gt; and &lt;code&gt;)</h3>
+            <p>Use <code>&lt;pre&gt;</code> to preserve whitespace and line breaks, ideal for displaying code blocks:</p>
+            <pre><code>
+function greet(name) {
+    console.log("Hello, " + name + "!");
+}
+greet("World");
+            </code></pre>
+        </section>
+
+        <section class="example-container">
+            <h2>3. Lists (Ordered and Unordered)</h2>
+            <p>Structure content using appropriate list types:</p>
+            
+            <h3>Unordered List (&lt;ul&gt;)</h3>
+            <ul>
+                <li>Item one (using <code>&lt;li&gt;</code>)</li>
+                <li>Item two</li>
+                <li>Item three</li>
+            </ul>
+
+            <h3>Ordered List (&lt;ol&gt;)</h3>
+            <ol>
+                <li>First step</li>
+                <li>Second step</li>
+                <li>Final step</li>
+            </ol>
+        </section>
+        
+        <section class="example-container">
+            <h2>4. Blockquotes and Citations</h2>
+            <p>Use these tags for quoting external sources or citing information:</p>
+            <blockquote cite="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/blockquote">
+                "Semantic HTML structure is crucial for accessibility and SEO."
+            </blockquote>
+            <p><em>Note:</em> The <code>&lt;cite&gt;</code> tag can wrap a URL or source title, often used within a blockquote.</p>
+        </section>
+
+        <section class="example-container">
+            <h2>5. Tables (Structured Data)</h2>
+            <p>Use tables for displaying data that requires rows and columns:</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Feature</th>
+                        <th>Status</th>
+                        <th>Notes</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Semantic Tags</td>
+                        <td>✅</td>
+                        <td>Improved structure</td>
+                    </tr>
+                    <tr>
+                        <td>Responsiveness</td>
+                        <td>✅</td>
+                        <td>Viewport meta tag included</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <button id="demoButton">Execute Example Function</button>
     </main>
     <script src="script.js"></script>
 </body>
