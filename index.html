@@ -94,20 +94,9 @@
             transition: transform 0.2s;
         }
 
-        /* Styling for the clickable link wrapper */
-        .requirement-card a {
-            display: block;
-            text-decoration: none;
-            color: inherit;
-            padding: 10px;
-            border-radius: 6px;
-            transition: background-color 0.2s;
-        }
-
-        .requirement-card a:hover {
-            background-color: #d5e9ff; /* Light hover effect */
-            transform: translateY(-3px);
-            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+        .requirement-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
         }
 
         .requirement-card h3 {
@@ -156,93 +145,54 @@
     <main>
         <section id="mission">
             <h2>A Commitment to Community Safety</h2>
-            <p>Join a force dedicated to integrity, service, and excellence. We are more than just a job; we are a commitment to protecting the lives and property of our neighbors. Our officers are trained in advanced conflict resolution and community engagement.</p>
+            <p>Join a force dedicated to integrity, service, and excellence. We are more than just a job; we are a commitment to protecting the lives and property of our neighbors. Our officers are trained in advanced conflict resolution, community engagement, and ethical policing.</p>
+            <p>We believe that true policing is built on trust. We seek individuals who embody professionalism, empathy, and unwavering dedication to justice.</p>
         </section>
-        <section>
-            <h2 style="margin-top: 40px;">What We Offer</h2>
-            <div style="display: flex; gap: 20px;">
-                <div style="flex: 1;">
-                    <h3 style="margin-top: 0;">Experience</h3>
-                    <p>Comprehensive training covering law enforcement, crisis management, and community relations.</p>
+
+        <section id="why-join">
+            <h2>Why Choose Our Department?</h2>
+            <div class="requirements-grid">
+                <div class="requirement-card">
+                    <h3>⭐ Superior Training</h3>
+                    <p>Access to the latest training facilities and curricula, ensuring our officers are prepared for any scenario.</p>
                 </div>
-                <div style="flex: 1;">
-                    <h3 style="margin-top: 0;">Support</h3>
-                    <p>A supportive culture dedicated to the well-being and professional growth of every officer.</p>
+                <div class="requirement-card">
+                    <h3>🤝 Community Focus</h3>
+                    <p>We prioritize community policing models, fostering genuine relationships with residents and local businesses.</p>
+                </div>
+                <div class="requirement-card">
+                    <h3>📈 Career Advancement</h3>
+                    <p>Opportunities for specialization (SWAT, Detectives, Forensics) and clear paths for professional growth.</p>
                 </div>
             </div>
         </section>
-        <section>
-            <h2 style="margin-top: 40px;">Key Areas of Focus</h2>
-            <div style="display: flex; gap: 20px;">
-                <div style="flex: 1;">
-                    <h3 style="margin-top: 0;">Community Policing</h3>
-                    <p>Building trust and strong relationships with the neighborhoods we serve.</p>
-                </div>
-                <div style="flex: 1;">
-                    <h3 style="margin-top: 0;">Emergency Response</h3>
-                    <p>Rapid, professional, and effective response to all emergencies.</p>
-                </div>
-            </div>
+
+        <section id="requirements">
+            <h2>Are You Ready to Serve?</h2>
+            <p>Joining our department requires dedication and meeting specific criteria. Review these minimum requirements:</p>
+            <ul>
+                <li><strong>Age:</strong> Must be at least 21 years old.</li>
+                <li><strong>Education:</strong> High School Diploma or GED required; college degree preferred.</li>
+                <li><strong>Physical Fitness:</strong> Must pass a rigorous physical agility test.</li>
+                <li><strong>Character:</strong> Must maintain a clean criminal record and pass comprehensive background checks.</li>
+            </ul>
         </section>
-        <section>
-            <h2 style="margin-top: 40px;">Our Pillars</h2>
-            <div style="display: flex; gap: 20px;">
-                <div style="flex: 1;">
-                    <h3 style="margin-top: 0;">Integrity</h3>
-                    <p>Upholding the highest ethical standards in every action we take.</p>
-                </div>
-                <div style="flex: 1;">
-                    <h3 style="margin-top: 0;">Excellence</h3>
-                    <p>Commitment to continuous improvement and professional mastery.</p>
-                </div>
-            </div>
+
+        <section id="application">
+            <h2>The Recruitment Process</h2>
+            <p>Our process is designed to assess not only your skills, but your character and commitment. Follow these general steps:</p>
+            <ol>
+                <li><strong>Initial Application:</strong> Complete our online application form.</li>
+                <li><strong>Written & Physical Testing:</strong> Participate in aptitude tests and the physical fitness assessment.</li>
+                <li><strong>Interviews & Background Check:</strong> Undergo multiple rounds of interviews with department leadership.</li>
+                <li><strong>Academy Training:</strong> Successfully complete the rigorous Police Academy program.</li>
+            </ol>
+            <button class="cta-button" onclick="alert('Redirecting to the official application portal...')">APPLY NOW</button>
         </section>
-        <section>
-            <h2 style="margin-top: 40px;">Career Opportunities</h2>
-            <div style="display: flex; gap: 20px;">
-                <div style="flex: 1;">
-                    <h3 style="margin-top: 0;">Join Us</h3>
-                    <p>Learn how you can begin a rewarding career protecting our community.</p>
-                </div>
-                <div style="flex: 1;">
-                    <h3 style="margin-top: 0;">Apply Today</h3>
-                    <p>Visit our official website for application details and open positions.</p>
-                </div>
-            </div>
-        </section>
-        <section>
-            <h2 style="margin-top: 40px;">Our Values</h2>
-            <div style="display: flex; gap: 20px;">
-                <div style="flex: 1;">
-                    <h3 style="margin-top: 0;">Respect</h3>
-                    <p>Treating every individual with dignity and consideration.</p>
-                </div>
-                <div style="flex: 1;">
-                    <h3 style="margin-top: 0;">Service</h3>
-                    <p>Putting the needs of the community before all else.</p>
-                </div>
-            </div>
-        </section>
-        
-        <div style="margin-top: 60px; text-align: center;">
-            <h2 style="margin-bottom: 30px;">Ready to Serve?</h2>
-            <p style="font-size: 1.2em;">Explore our career paths and join a team dedicated to making a tangible difference.</p>
-        </div>
-        
-        <!-- Original content structure retained for context, but content updated to reflect general corporate/service structure -->
-        <div style="margin-top: 60px;">
-            <h2 style="margin-bottom: 30px;">Join Our Team</h2>
-            <div style="display: flex; gap: 20px;">
-                <div style="flex: 1;">
-                    <h3 style="margin-top: 0;">Learn More</h3>
-                    <p>Visit our careers page for detailed job descriptions.</p>
-                </div>
-                <div style="flex: 1;">
-                    <h3 style="margin-top: 0;">Apply Now</h3>
-                    <p>Submit your application through our online portal.</p>
-                </div>
-            </div>
-        </div>
-    </div>
+    </main>
+
+    <footer>
+        &copy; 2024 [Department Name] Police Department. All Rights Reserved. | Dedicated to Public Safety.
+    </footer>
 </body>
 </html>
