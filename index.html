@@ -3,196 +3,241 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Join Our Force | [Department Name] Recruitment</title>
-    <link rel="stylesheet" href="style.css">
+    <title>HTML Demonstration Page: Various HTML Examples</title>
     <style>
-        /* Police/Authority Theme Styling */
-        :root {
-            --primary-blue: #003366; /* Deep Navy Blue */
-            --secondary-gold: #FFC300; /* Accent Gold/Yellow */
-            --text-dark: #333;
-            --text-light: #f4f4f9;
-            --border-color: #ddd;
-        }
-
+        /* General Reset and Styling */
         body {
-            font-family: 'Arial', 'Helvetica', sans-serif;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             line-height: 1.6;
-            color: var(--text-dark);
+            color: #333;
             margin: 0;
             padding: 0;
-            background-color: #f9f9f9;
+            background-color: #f4f4f9;
         }
 
-        /* Header and Hero Section */
+        .container {
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 20px;
+            background: white;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+
         header {
-            background: var(--primary-blue);
-            color: var(--text-light);
-            padding: 80px 20px;
             text-align: center;
-            background-image: linear-gradient(rgba(0, 51, 102, 0.8), rgba(0, 51, 102, 0.9)), url('police_bg_placeholder.jpg'); /* Placeholder for a strong image */
-            background-size: cover;
-            background-position: center;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            padding: 40px 20px;
+            background-color: #e9e9e9;
+            border-bottom: 3px solid #ccc;
+            margin-bottom: 30px;
         }
 
         header h1 {
-            margin-top: 0;
-            font-size: 3.5em;
-            letter-spacing: 2px;
-            color: white;
-            text-transform: uppercase;
+            color: #007bff;
+            margin-bottom: 10px;
         }
 
         header p {
-            font-size: 1.5em;
-            margin-bottom: 30px;
-            color: var(--secondary-gold);
-        }
-
-        /* Main Layout */
-        main {
-            max-width: 1200px;
-            margin: 40px auto;
-            padding: 0 20px;
+            color: #666;
         }
 
         /* Section Styling */
         section {
-            background: white;
-            padding: 40px;
-            margin-bottom: 30px;
+            margin-bottom: 40px;
+            padding: 20px;
+            border: 1px solid #ddd;
             border-radius: 8px;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
-            border-left: 5px solid var(--primary-blue);
         }
 
         h2 {
-            color: var(--primary-blue);
-            font-size: 2em;
-            border-bottom: 3px solid var(--secondary-gold);
-            padding-bottom: 10px;
-            margin-bottom: 30px;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-
-        /* Lists and Details */
-        .requirements-grid {
-            display: flex;
-            gap: 20px;
-            flex-wrap: wrap;
-            justify-content: space-between;
-        }
-
-        .requirement-card {
-            flex: 1 1 30%;
-            background: #eef;
-            padding: 20px;
-            border-radius: 6px;
-            border: 1px solid #cce;
-            transition: transform 0.2s;
-        }
-
-        .requirement-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-        }
-
-        .requirement-card h3 {
-            color: var(--primary-blue);
+            color: #007bff;
+            border-bottom: 2px solid #007bff;
+            padding-bottom: 5px;
             margin-top: 0;
         }
 
-        /* Call to Action Button */
-        .cta-button {
-            display: inline-block;
-            background-color: var(--secondary-gold);
-            color: var(--primary-blue);
-            padding: 15px 40px;
-            font-size: 1.2em;
-            text-decoration: none;
-            border-radius: 50px;
-            border: none;
-            cursor: pointer;
-            transition: background-color 0.3s, transform 0.2s;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        /* Lists */
+        ul, ol {
+            margin-left: 20px;
+            padding-left: 0;
+        }
+
+        /* Tables */
+        table {
+            width: 100%;
+            border-collapse: collapse;
             margin-top: 20px;
         }
 
-        .cta-button:hover {
-            background-color: #e6b000; /* Slightly darker gold */
-            transform: translateY(-2px);
+        th, td {
+            padding: 12px;
+            text-align: left;
+            border: 1px solid #ddd;
+        }
+
+        th {
+            background-color: #007bff;
+            color: white;
+        }
+
+        /* Forms */
+        form label {
+            display: block;
+            margin-top: 10px;
+            font-weight: bold;
+        }
+
+        form input[type="text"],
+        form input[type="email"],
+        form textarea,
+        form select {
+            width: 98%;
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        .button-group button {
+            padding: 10px 20px;
+            margin-right: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
+
+        .button-group button.primary {
+            background-color: #28a745;
+            color: white;
+        }
+
+        .button-group button.secondary {
+            background-color: #6c757d;
+            color: white;
+        }
+
+        /* Semantic Elements */
+        figure {
+            margin: 20px 0;
+            text-align: center;
+        }
+
+        figure img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        figcaption {
+            margin-top: 10px;
+            font-style: italic;
+            color: #666;
         }
 
         /* Footer */
         footer {
-            background: var(--primary-blue);
-            color: white;
             text-align: center;
             padding: 20px;
-            margin-top: 40px;
+            margin-top: 30px;
+            background-color: #333;
+            color: white;
             font-size: 0.9em;
         }
     </style>
 </head>
 <body>
     <header>
-        <h1>[Department Name] Police Department</h1>
-        <p>Protecting and Serving Our Community Since 1985</p>
+        <h1>HTML Demonstration Page</h1>
+        <p>A comprehensive sample showcasing various HTML elements and structures.</p>
     </header>
 
-    <main>
-        <section id="mission">
-            <h2>A Commitment to Community Safety</h2>
-            <p>Join a force dedicated to integrity, service, and excellence. We are more than just a job; we are a commitment to protecting the lives and property of our neighbors. Our officers are trained in advanced conflict resolution, community engagement, and ethical policing.</p>
-            <p>We believe that true policing is built on trust. We seek individuals who embody professionalism, empathy, and unwavering dedication to justice.</p>
-        </section>
+    <div class="container">
+        
+        <!-- SECTION 1: Basic Structure and Lists -->
+        <section id="basic-structure">
+            <h2>1. Semantic HTML & Lists (<code>&lt;header&gt;</code>, <code>&lt;main&gt;</code>, <code>&lt;section&gt;</code>, <code>&lt;ul&gt;</code>, <code>&lt;ol&gt;</code>)</h2>
+            <p>Semantic tags help define the meaning and role of content. Lists are used for ordered or unordered groupings of items.</p>
 
-        <section id="why-join">
-            <h2>Why Choose Our Department?</h2>
-            <div class="requirements-grid">
-                <div class="requirement-card">
-                    <h3>⭐ Superior Training</h3>
-                    <p>Access to the latest training facilities and curricula, ensuring our officers are prepared for any scenario.</p>
-                </div>
-                <div class="requirement-card">
-                    <h3>🤝 Community Focus</h3>
-                    <p>We prioritize community policing models, fostering genuine relationships with residents and local businesses.</p>
-                </div>
-                <div class="requirement-card">
-                    <h3>📈 Career Advancement</h3>
-                    <p>Opportunities for specialization (SWAT, Detectives, Forensics) and clear paths for professional growth.</p>
-                </div>
-            </div>
-        </section>
-
-        <section id="requirements">
-            <h2>Are You Ready to Serve?</h2>
-            <p>Joining our department requires dedication and meeting specific criteria. Review these minimum requirements:</p>
+            <h3>Unordered List (<code>&lt;ul&gt;</code>)</h3>
             <ul>
-                <li><strong>Age:</strong> Must be at least 21 years old.</li>
-                <li><strong>Education:</strong> High School Diploma or GED required; college degree preferred.</li>
-                <li><strong>Physical Fitness:</strong> Must pass a rigorous physical agility test.</li>
-                <li><strong>Character:</strong> Must maintain a clean criminal record and pass comprehensive background checks.</li>
+                <li>Item One (<code>&lt;li&gt;</code>)</li>
+                <li>Item Two (<code>&lt;li&gt;</code>)</li>
+                <li>Item Three (<code>&lt;li&gt;</code>)</li>
             </ul>
-        </section>
 
-        <section id="application">
-            <h2>The Recruitment Process</h2>
-            <p>Our process is designed to assess not only your skills, but your character and commitment. Follow these general steps:</p>
+            <h3>Ordered List (<code>&lt;ol&gt;</code>)</h3>
             <ol>
-                <li><strong>Initial Application:</strong> Complete our online application form.</li>
-                <li><strong>Written & Physical Testing:</strong> Participate in aptitude tests and the physical fitness assessment.</li>
-                <li><strong>Interviews & Background Check:</strong> Undergo multiple rounds of interviews with department leadership.</li>
-                <li><strong>Academy Training:</strong> Successfully complete the rigorous Police Academy program.</li>
+                <li>First Step (<code>&lt;li&gt;</code>)</li>
+                <li>Second Step (<code>&lt;li&gt;</code>)</li>
+                <li>Third Step (<code>&lt;li&gt;</code>)</li>
             </ol>
-            <button class="cta-button" onclick="alert('Redirecting to the official application portal...')">APPLY NOW</button>
         </section>
-    </main>
 
-    <footer>
-        &copy; 2024 [Department Name] Police Department. All Rights Reserved. | Dedicated to Public Safety.
-    </footer>
+        <!-- SECTION 2: Tables -->
+        <section id="tables">
+            <h2>2. Data Presentation (<code>&lt;table&gt;</code>, <code>&lt;thead&gt;</code>, <code>&lt;tbody&gt;</code>, <code>&lt;th&gt;</code>, <code>&lt;td&gt;</code>)</h2>
+            <p>Tables are structured for displaying tabular data.</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Header 1 (<code>&lt;th&gt;</code>)</th>
+                        <th>Header 2 (<code>&lt;th&gt;</code>)</th>
+                        <th>Header 3 (<code>&lt;th&gt;</code>)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Data Cell 1 (<code>&lt;td&gt;</code>)</td>
+                        <td>Data Cell 2 (<code>&lt;td&gt;</code>)</td>
+                        <td>Data Cell 3 (<code>&lt;td&gt;</code>)</td>
+                    </tr>
+                    <tr>
+                        <td>More Data</td>
+                        <td>Info</td>
+                        <td>Complete</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- SECTION 3: Forms and Inputs -->
+        <section id="forms">
+            <h2>3. User Input (<code>&lt;form&gt;</code>, <code>&lt;label&gt;</code>, <code>&lt;input&gt;</code>, <code>&lt;textarea&gt;</code>)</h2>
+            <p>Forms allow users to submit data to the server.</p>
+            <form action="#" method="post">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required placeholder="Enter your full name">
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="example@domain.com">
+
+                <label for="comments">Comments:</label>
+                <textarea id="comments" name="comments" rows="4" placeholder="Enter your message here..."></textarea>
+
+                <button type="submit">Submit Form</button>
+            </form>
+        </section>
+
+        <!-- SECTION 4: Media and Embedding -->
+        <section>
+            <h2>Media & Embedding</h2>
+            <p>This section demonstrates how to include external media. For video, you would typically use an iframe:</p>
+            <!-- Placeholder for an embedded video -->
+            <iframe width="100%" height="300" src="https://www.youtube.com/embed/placeholder" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
+        </section>
+
+        <!-- SECTION 5: Semantic Structure -->
+        <section>
+            <h2>Semantic Structure (Aside)</h2>
+            <aside>
+                <p>This is an <small>aside</small> element. It contains content that is related to the main article but could stand alone, like a sidebar or a pull quote.</p>
+                <p><strong>Key takeaway:</strong> Use semantic tags (like <code>&lt;aside&gt;</code>, <code>&lt;article&gt;</code>, <code>&lt;nav&gt;</code>) to tell browsers and screen readers what the content *means*, not just how it looks.</p>
+            </aside>
+        </section>
+
+    </div>
 </body>
 </html>
