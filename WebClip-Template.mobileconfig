@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+
+<!--
+===============================================================
+ WEB CLIP PROFILE TEMPLATE (iOS)
+===============================================================
+ HOW TO USE THIS TEMPLATE
+ 1. Make a copy of this file for each website you want.
+ 2. Search for the word EDIT. Every spot you need to change is marked.
+ 3. Generate NEW UUIDs (see UUID NOTES below) for every copy.
+ 4. Save the file with a .mobileconfig extension.
+ 5. Send it to your iPhone (AirDrop, email, or a link in Safari).
+ 6. Install: Settings > General > VPN & Device Management > tap the
+    profile > Install. (After download, iOS shows a
+    "Profile Downloaded" banner in Settings.)
+ 7. To remove: same screen > tap the profile > Remove Profile.
+
+ UUID NOTES
+ Every payload needs a unique ID (UUID). Make one with:
+   Mac or Linux terminal:  uuidgen
+   Or any online UUID v4 generator.
+ You need TWO per profile: one for the inner Web Clip payload and
+ one for the outer Configuration. Never reuse the same UUID across
+ two different profiles, or iOS will treat the second as a
+ replacement of the first.
+
+ ADDING MORE THAN ONE WEBSITE IN A SINGLE PROFILE
+ Copy the whole inner Web Clip dict (from its opening dict tag to its
+ closing dict tag) and paste it right after the first one inside the
+ PayloadContent array. Give the copy its own UUID, its own
+ PayloadIdentifier, URL, and Label. A commented-out second example is
+ included below to show where it goes.
+===============================================================
+-->
+
+<plist version="1.0">
+<dict>
+
+    <!-- OUTER PROFILE SETTINGS: what the profile itself is called. -->
+
+    <key>PayloadContent</key>
+    <array>
+
+        <!-- ===================================================
+             WEB CLIP #1  (the home screen icon)
+             =================================================== -->
+        <dict>
+
+            <!-- Do not change: tells iOS this payload is a Web Clip. -->
+            <key>PayloadType</key>
+            <string>com.apple.webClip.managed</string>
+
+            <!-- Do not change. -->
+            <key>PayloadVersion</key>
+            <integer>1</integer>
+
+            <!-- EDIT: Unique ID for this Web Clip. Run uuidgen and paste
+                 the result. Must be different for every Web Clip. -->
+            <key>PayloadUUID</key>
+            <string>11111111-AAAA-4BBB-8CCC-111111111111</string>
+
+            <!-- EDIT: Reverse-domain style name, unique per Web Clip.
+                 Example: com.yourname.webclip.mysite
+                 Use only letters, numbers, dots and hyphens. -->
+            <key>PayloadIdentifier</key>
+            <string>com.example.webclip.site1</string>
+
+            <!-- EDIT: Name shown in Settings under this profile. -->
+            <key>PayloadDisplayName</key>
+            <string>My Site Web Clip</string>
+
+            <!-- Optional: A note shown in the profile details screen. -->
+            <key>PayloadDescription</key>
+            <string>Adds a home screen shortcut to my site.</string>
+
+            <!-- EDIT: The full address the icon opens. Must start with
+                 https:// (or http://). For a PWA, use the URL the app
+                 starts at, such as the site root. Add any query
+                 string you need after the address. -->
+            <key>URL</key>
+            <string>https://example.com/</string>
+
+            <!-- EDIT: The text shown under the icon on the home
+                 screen. Keep it short (about 10 characters or fewer
+                 so it doesn't get cut off). -->
+            <key>Label</key>
+            <string>My Site</string>
+
+            <!-- FullScreen: true = opens like a standalone app with no
+                 Safari address bar or toolbar (best for PWAs and web
+                 apps). false = opens inside Safari with normal
+                 browser controls (best for plain bookmarks). -->
+            <key>FullScreen</key>
+            <true/>
+
+            <!-- IsRemovable: true = you can delete the icon from the
+                 home screen like any app. false = icon can only be
+                 removed by deleting the profile in Settings. -->
+            <key>IsRemovable</key>
+            <true/>
+
+            <!-- IgnoreManifestScope (iOS 14 and later):
+                 false = if the site has a PWA manifest, iOS limits
+                 the app to the manifest's scope, and links outside
+                 that scope open in Safari.
+                 true = ignore the manifest scope, so the whole site
+                 and every link stays inside the app window.
+                 Set to true if links keep kicking you out to Safari. -->
+            <key>IgnoreManifestScope</key>
+            <false/>
+
+            <!-- Precomposed: true = iOS shows your icon exactly as is.
+                 false = iOS may add its usual gloss and rounded
+                 treatment. Modern iOS ignores the gloss, but leave
+                 it true for pixel exact icons. -->
+            <key>Precomposed</key>
+            <true/>
+
+            <!-- ICON (OPTIONAL). If you leave this block out, iOS makes
+                 a plain default icon. To use your own:
+                 1. Make a square PNG, ideally 180x180 or larger
+                    (1024x1024 works well). No transparency is safest.
+                 2. Turn it into one line of base64 text:
+                      Mac:    base64 -i icon.png | tr -d '\n'
+                      Linux:  base64 -w 0 icon.png
+                 3. Delete the comment markers around the block
+                    below and paste the text between the data tags,
+                    replacing PASTE_BASE64_HERE.
+
+            <key>Icon</key>
+            <data>PASTE_BASE64_HERE</data>
+            -->
+
+        </dict>
+
+        <!-- ===================================================
+             WEB CLIP #2 (EXAMPLE, commented out)
+             To add a second site: remove the comment markers
+             around this block, then change every EDIT value
+             (UUID, PayloadIdentifier, URL, Label).
+
+        <dict>
+            <key>PayloadType</key>
+            <string>com.apple.webClip.managed</string>
+            <key>PayloadVersion</key>
+            <integer>1</integer>
+            <key>PayloadUUID</key>
+            <string>22222222-BBBB-4CCC-8DDD-222222222222</string>
+            <key>PayloadIdentifier</key>
+            <string>com.example.webclip.site2</string>
+            <key>PayloadDisplayName</key>
+            <string>Second Site Web Clip</string>
+            <key>URL</key>
+            <string>https://example.org/</string>
+            <key>Label</key>
+            <string>Site 2</string>
+            <key>FullScreen</key>
+            <true/>
+            <key>IsRemovable</key>
+            <true/>
+            <key>IgnoreManifestScope</key>
+            <false/>
+        </dict>
+             =================================================== -->
+
+    </array>
+
+    <!-- EDIT: Name shown at the top of the profile in Settings. -->
+    <key>PayloadDisplayName</key>
+    <string>My Web Clips</string>
+
+    <!-- Optional: Longer description of the whole profile. -->
+    <key>PayloadDescription</key>
+    <string>Home screen shortcuts for my websites.</string>
+
+    <!-- EDIT: Unique reverse-domain ID for the whole profile. -->
+    <key>PayloadIdentifier</key>
+    <string>com.example.webclips</string>
+
+    <!-- EDIT: Unique ID for the whole profile (run uuidgen). -->
+    <key>PayloadUUID</key>
+    <string>33333333-CCCC-4DDD-8EEE-333333333333</string>
+
+    <!-- Optional: Your name or organization, shown in Settings. -->
+    <key>PayloadOrganization</key>
+    <string>Personal</string>
+
+    <!-- Do not change: this marks the file as a profile. -->
+    <key>PayloadType</key>
+    <string>Configuration</string>
+
+    <!-- Do not change. -->
+    <key>PayloadVersion</key>
+    <integer>1</integer>
+
+    <!-- PayloadRemovalDisallowed: false = you can remove the profile
+         any time. Leave false so you are never locked in. -->
+    <key>PayloadRemovalDisallowed</key>
+    <false/>
+
+</dict>
+</plist>
